@@ -1,0 +1,49 @@
+import React from "react";
+import Button from "./Button";
+import bannerHero from "../assets/banner_hero.png";
+
+export default function Hero() {
+  return (
+    <section className="bg-white-2">
+      <div className="container mx-auto pb-8 md:pb-14">
+        <div className="flex flex-col lg:flex-row items-center justify-between px-4 py-8 md:py-16 gap-8">
+          <div className="flex flex-col gap-y-8 flex-1 pl-0 md:pl-8 lg:pl-16">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight md:leading-[4.5rem]">
+              Ubah{" "}
+              <span className="bg-green-2 inline-block leading-10 px-2 rounded">
+                Sampah
+              </span>{" "}
+              Jadi{" "}
+              <span className="bg-green-2 inline-block leading-10 px-2 rounded">
+                Harta
+              </span>{" "}
+              dengan
+              Teknologi Cerdas
+            </h1>
+            <p className="font-medium text-lg md:text-xl md:w-5/6">
+              Trashure membantu Anda memilah sampah secara otomatis
+              dan mendapatkan reward untuk setiap aksi
+              peduli lingkungan yang Anda lakukan.
+            </p>
+            <div className="flex flex-col md:flex-row gap-4">
+              <Button variant="primary" size="lg">
+                Mulai Sekarang
+              </Button>
+              <Button variant="secondary" size="md">
+                Pelajari Lebih Lanjut
+              </Button>
+            </div>
+          </div>
+          <div className="flex items-center justify-center flex-1">
+            <img
+              src={bannerHero}
+              alt="Hero Banner"
+              draggable={false}
+              className="md:w-[46rem] lg:w-[37rem]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
