@@ -22,7 +22,7 @@ const FooterSection = ({ title, links }) => (
 export default function Footer() {
   return (
     <footer className="bg-white-2">
-      <div className="container mx-auto py-10 md:py-24 px-4">
+      <div className="container mx-auto py-10 md:py-24 px-14">
         <div className="flex items-start justify-between flex-col lg:flex-row gap-10 lg:gap-0">
           <div className="flex flex-col gap-y-3 md:gap-y-5">
             <img src={logoDark} alt="Trashure Logo" className="w-44" />

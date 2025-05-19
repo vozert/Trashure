@@ -57,8 +57,8 @@ export default function Map() {
   }, [userLocation]);
 
   return (
-    <section className="py-10 sm:py-14 md:py-20 lg:py-24">
-      <div className="container mx-auto px-4 sm:px-8 md:px-14 lg:px-8">
+    <section className="py-10 sm:py-14 md:py-20 lg:py-24" id="map">
+      <div className="container mx-auto px-10 sm:px-8 md:px-14 lg:px-14">
         <div className="text-center gap-y-4 flex flex-col mb-8">
           <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:leading-[4rem]">
             Lokasi Trashure

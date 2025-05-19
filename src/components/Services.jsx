@@ -62,12 +62,8 @@ function ServiceTabPanel() {
 }
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabClick = (index) => setActiveTab(index);
-
   return (
-    <section>
+    <section id="features">
       <div className="pt-12 md:pt-24 container mx-auto md:px-14 lg:px-0">
         <div className="text-center px-4 gap-y-4 flex flex-col">
           <h1 className="font-extrabold text-4xl md:text-5xl lg:leading-[4rem]">
@@ -78,7 +74,7 @@ export default function Services() {
           </p>
         </div>
 
-        <Tabs selectedIndex={activeTab} onSelect={handleTabClick}>
+        <Tabs>
           <div className="py-12 flex items-center justify-center">
             <TabList className="flex items-center gap-6 md:gap-10 lg:gap-16 px-2 md:px-4 overflow-x-scroll scrollbar-hide border-b-2">
               {TAB_DATA.map((tab, idx) => {

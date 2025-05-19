@@ -28,7 +28,7 @@ const statsData = [
 export default function Stats() {
   return (
     <section className="bg-green-1 overflow-x-hidden">
-      <div className="container mx-auto relative z-0">
+      <div className="container mx-auto relative z-0 lg:px-14">
         <div className="flex flex-col lg:flex-row md:items-center justify-between px-4 py-12 md:py-16 gap-8 relative z-10">
           <div>
             <h2 className="text-white-1 font-bold text-4xl leading-[3rem]">

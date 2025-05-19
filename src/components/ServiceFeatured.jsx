@@ -1,11 +1,10 @@
 import bannerServicesFeatured from "../assets/illustration_data.png";
-import iconCheckWhite from "../assets/icon-check-white.svg";
 import Button from "./Button";
 
 const ServiceFeatured = () => (
   <section className="bg-white-2">
     <div className="container mx-auto md:px-14">
-      <div className="flex flex-col lg:flex-row items-center justify-between px-4 py-12 md:py-16 gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between lg:px-14 py-12 md:py-16 gap-8">
         <div className="flex flex-col gap-y-8 flex-1">
           <div className="flex flex-col gap-y-3">
             <h2 className="text-3xl font-bold leading-[2.75rem]">

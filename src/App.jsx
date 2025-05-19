@@ -1,12 +1,8 @@
 import React from "react";
-import Homepage from "./pages/Homepage";
+import AppRoutes from "./routes/routes.jsx";
 
 function App() {
-  return (
-    <>
-      <Homepage />
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

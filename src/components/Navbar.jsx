@@ -2,6 +2,8 @@ import { useState } from "react";
 import logowhite from "../assets/pastilaris-logo-white.svg";
 import Button from "./Button";
 import { DATA_NAVBARS } from "../utils/data";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,16 +18,26 @@ export default function Navbar() {
     >
       {DATA_NAVBARS.map((item) => (
         <li key={item.id}>
-          <a
-            href={item.link}
-            className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
-              item.active
-                ? "text-green-2 underline underline-offset-2"
-                : ""
-            }`}
-          >
-            {item.title}
-          </a>
+          {item.link.startsWith("#") ? (
+            <HashLink
+              smooth
+              to={`/${item.link}`}
+              className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
+                item.active ? "text-green-2 underline underline-offset-2" : ""
+              }`}
+            >
+              {item.title}
+            </HashLink>
+          ) : (
+            <Link
+              to={item.link === "#home" ? "/" : item.link}
+              className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
+                item.active ? "text-green-2 underline underline-offset-2" : ""
+              }`}
+            >
+              {item.title}
+            </Link>
+          )}
         </li>
       ))}
     </ul>
@@ -44,9 +56,11 @@ export default function Navbar() {
             </div>
             <div className="hidden lg:block">
               <div className="flex gap-x-3">
-                <Button variant="white" size="md">
-                  Login
-                </Button>
+                <Link to={"/login"}>
+                  <Button as={Link} to="/login" variant="white" size="md">
+                    Login
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
