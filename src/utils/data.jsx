@@ -32,3 +32,9 @@ export const FOOTER_LINKS = {
     { id: 4, name: "Pricing" },
   ],
 };
+
+export const FEATURE_LIST = [
+  "Pantau klasifikasi sampah secara langsung",
+  "Hitung kontribusi lingkungan Anda",
+  "Dapatkan reward secara real-time",
+];
