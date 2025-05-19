@@ -30,7 +30,7 @@ const FEATURE_LIST = [
 
 function ServiceTabPanel() {
   return (
-    <div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between">
+    <div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between px-4 sm:px-8">
       <div className="flex items-center justify-center flex-1">
         <img src={bannerServices} alt="Service Banner" />
       </div>

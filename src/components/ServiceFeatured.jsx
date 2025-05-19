@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const ServiceFeatured = () => (
   <section className="bg-white-2">
-    <div className="container mx-auto md:px-14">
+    <div className="container mx-auto px-4 sm:px-8 md:px-14">
       <div className="flex flex-col lg:flex-row items-center justify-between lg:px-14 py-12 md:py-16 gap-8">
         <div className="flex flex-col gap-y-8 flex-1">
           <div className="flex flex-col gap-y-3">
