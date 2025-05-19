@@ -9,9 +9,6 @@ import {
   control,
   layerGroup,
 } from "leaflet";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { MAP_SERVICE_API_KEY } from "../config/key";
 
 export default class Map {
@@ -142,9 +139,9 @@ export default class Map {
   createIcon(options = {}) {
     return icon({
       ...Icon.Default.prototype.options,
-      iconRetinaUrl: markerIcon2x,
-      iconUrl: markerIcon,
-      shadowUrl: markerShadow,
+      iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+      iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+      shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
       ...options,
     });
   }
