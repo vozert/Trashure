@@ -1,47 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logowhite from "../assets/pastilaris-logo-white.svg";
 import Button from "./Button";
-import { DATA_NAVBARS } from "../utils/data";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import NavLinks from "./NavLinks";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const genericHamburgerLine =
     "h-[2px] w-full my-1 rounded-full bg-white-2 transition ease-in-out transform duration-300";
-
-  const renderNavLinks = (isMobile = false) => (
-    <ul
-      className={`flex ${
-        isMobile ? "flex-col gap-y-8 pb-6" : "gap-x-8 p-2 ml-8"
-      } text-base font-semibold text-white-1`}
-    >
-      {DATA_NAVBARS.map((item) => (
-        <li key={item.id}>
-          {item.link.startsWith("#") ? (
-            <HashLink
-              smooth
-              to={`/${item.link}`}
-              className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
-                item.active ? "text-green-2 underline underline-offset-2" : ""
-              }`}
-            >
-              {item.title}
-            </HashLink>
-          ) : (
-            <Link
-              to={item.link === "#home" ? "/" : item.link}
-              className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
-                item.active ? "text-green-2 underline underline-offset-2" : ""
-              }`}
-            >
-              {item.title}
-            </Link>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
 
   return (
     <header className="bg-white-2 p-2 lg:py-8">
@@ -52,15 +19,19 @@ export default function Navbar() {
         <div className="hidden lg:block w-full">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <nav className="hidden lg:block">{renderNavLinks(false)}</nav>
+              <nav className="hidden lg:block">
+                <NavLinks isMobile={false} />
+              </nav>
             </div>
             <div className="hidden lg:block">
               <div className="flex gap-x-3">
-                <Link to={"/login"}>
-                  <Button as={Link} to="/login" variant="white" size="md">
-                    Login
-                  </Button>
-                </Link>
+                <Button
+                  variant="white"
+                  size="md"
+                  onClick={() => navigate("/login")}
+                >
+                  Login
+                </Button>
               </div>
             </div>
           </div>
@@ -102,11 +73,18 @@ export default function Navbar() {
           }`}
         >
           <nav className="w-full" data-navbar>
-            {renderNavLinks(true)}
+            <NavLinks isMobile={true} />
           </nav>
           <div className="lg:hidden">
             <div className="flex flex-col gap-y-3">
-              <Button variant="white" size="md">
+              <Button
+                variant="white"
+                size="md"
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/login");
+                }}
+              >
                 Login
               </Button>
             </div>
