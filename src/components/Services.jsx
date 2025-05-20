@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import bannerServices from "../assets/banner-services.png";
 import iconCheck from "../assets/icon-check.svg";
@@ -30,7 +31,7 @@ const FEATURE_LIST = [
 
 function ServiceTabPanel() {
   return (
-    <div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between px-4 sm:px-8">
+    <div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between px-4 sm:px-8 lg:py-1">
       <div className="flex items-center justify-center flex-1">
         <img src={bannerServices} alt="Service Banner" />
       </div>
@@ -53,9 +54,11 @@ function ServiceTabPanel() {
             </div>
           ))}
         </div>
-        <Button variant="secondary" size="md">
-          Pelajari Cara Kerja
-        </Button>
+        <Link to="/carakerja">
+          <Button variant="secondary" size="md">
+            Pelajari Cara Kerja
+          </Button>
+        </Link>
       </div>
     </div>
   );

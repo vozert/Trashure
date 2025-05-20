@@ -4,6 +4,7 @@ import iconCheck from "../assets/icon-check.svg";
 import Button from "./Button";
 import MapUtil from "../utils/map";
 import { FEATURE_LIST } from "../utils/data";
+import { Link } from "react-router-dom";
 
 export default function Map() {
   const mapContainer = useRef(null);
@@ -59,7 +60,7 @@ export default function Map() {
   return (
     <section className="py-10 sm:py-14 md:py-20 lg:py-24" id="map">
       <div className="container mx-auto px-10 sm:px-8 md:px-14 lg:px-14">
-        <div className="text-center gap-y-4 flex flex-col mb-8">
+        <div className="text-center gap-y-4 flex flex-col mb-16">
           <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:leading-[4rem]">
             Lokasi Trashure
           </h1>
@@ -68,7 +69,7 @@ export default function Map() {
             memilah sampah di berbagai lokasi.
           </p>
         </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-20 lg:pb-10">
           {/* Left: Features & Testimonial */}
           <div className="flex flex-col items-start w-full lg:w-1/2 gap-10 md:gap-10">
             <div className="flex flex-col gap-y-3 text-left md:text-center lg:text-left w-full">
@@ -89,13 +90,11 @@ export default function Map() {
                 </div>
               ))}
             </div>
-            <Button
-              variant="secondary"
-              size="md"
-              className="w-full sm:w-auto mt-4"
-            >
-              Pelajari Cara Kerja
-            </Button>
+            <Link to="/carakerja" className="w-full sm:w-auto mt-4">
+              <Button variant="secondary" size="md" className="w-full sm:w-auto">
+                Pelajari Cara Kerja
+              </Button>
+            </Link>
           </div>
           {/* Right: Leaflet Map */}
           <div className="flex items-center justify-center w-full lg:w-1/2 mb-8 lg:mb-0">

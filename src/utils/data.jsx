@@ -24,3 +24,30 @@ export const FEATURE_LIST = [
   "Hitung kontribusi lingkungan Anda",
   "Dapatkan reward secara real-time",
 ];
+
+export const STEPS = [
+  {
+    title: "Deteksi Otomatis",
+    desc: "Sistem akan secara otomatis mendeteksi keberadaan objek sampah menggunakan kamera perangkat Anda.",
+    img: "",
+    left: false,
+  },
+  {
+    title: "Klasifikasi Sampah",
+    desc: "Aplikasi akan mengidentifikasi dan mengklasifikasikan jenis sampah berdasarkan kategori seperti organik, anorganik, atau B3.",
+    img: "",
+    left: true,
+  },
+  {
+    title: "Akurasi dan Informasi",
+    desc: "Pengguna akan mendapatkan informasi tentang akurasi klasifikasi serta edukasi singkat terkait dampak dan cara penanganan jenis sampah tersebut.",
+    img: "",
+    left: false,
+  },
+  {
+    title: "Rekomendasi Penanganan",
+    desc: "Trashure memberikan saran penanganan yang tepat untuk setiap jenis sampah berdasarkan klasifikasi yang telah dilakukan.",
+    img: "",
+    left: true,
+  },
+];

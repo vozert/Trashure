@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import bannerHero from "../assets/banner_hero.png";
+import { HashLink } from "react-router-hash-link";
 
 export default function Hero() {
   return (
@@ -29,9 +30,11 @@ export default function Hero() {
               <Button variant="primary" size="lg">
                 Mulai Sekarang
               </Button>
-              <Button variant="secondary" size="md">
-                Pelajari Lebih Lanjut
-              </Button>
+              <HashLink smooth to="/#features">
+                <Button variant="secondary" size="md">
+                  Pelajari Lebih Lanjut
+                </Button>
+              </HashLink>
             </div>
           </div>
           <div className="flex items-center justify-center flex-1">
