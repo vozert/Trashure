@@ -26,12 +26,24 @@ export default function Hero() {
               dan mendapatkan reward untuk setiap aksi
               peduli lingkungan yang Anda lakukan.
             </p>
-            <div className="flex flex-col md:flex-row gap-4">
-              <Button variant="primary" size="lg">
+            <div className="flex flex-col md:flex-row w-full gap-4">
+              <Button 
+                variant="primary" 
+                size="lg"
+                className="w-full sm:w-auto"
+              >
                 Mulai Sekarang
               </Button>
-              <HashLink smooth to="/#features">
-                <Button variant="secondary" size="md">
+              <HashLink 
+                smooth 
+                to="/#features" 
+                className="w-full sm:w-auto"
+              >
+                <Button 
+                  variant="secondary" 
+                  size="md"
+                  className="w-full"
+                >
                   Pelajari Lebih Lanjut
                 </Button>
               </HashLink>
