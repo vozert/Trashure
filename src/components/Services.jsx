@@ -54,8 +54,12 @@ function ServiceTabPanel() {
             </div>
           ))}
         </div>
-        <Link to="/carakerja">
-          <Button variant="secondary" size="md">
+        <Link to="/carakerja" className="w-full md:w-auto">
+          <Button 
+            variant="secondary" 
+            size="md" 
+            className="w-full"
+          >
             Pelajari Cara Kerja
           </Button>
         </Link>
@@ -67,7 +71,7 @@ function ServiceTabPanel() {
 export default function Services() {
   return (
     <section id="features">
-      <div className="pt-12 md:pt-24 container mx-auto md:px-14 lg:px-0">
+      <div className="pt-12 md:pt-24 container mx-auto md:px-4 lg:px-0">
         <div className="text-center px-4 gap-y-4 flex flex-col">
           <h1 className="font-extrabold text-4xl md:text-5xl lg:leading-[4rem]">
             Fitur Canggih untuk Lingkungan Lebih Bersih

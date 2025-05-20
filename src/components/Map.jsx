@@ -90,8 +90,8 @@ export default function Map() {
                 </div>
               ))}
             </div>
-            <Link to="/carakerja" className="w-full sm:w-auto mt-4">
-              <Button variant="secondary" size="md" className="w-full sm:w-auto">
+            <Link to="/carakerja" className="w-full md:w-auto">
+              <Button variant="secondary" size="md" className="w-full">
                 Pelajari Cara Kerja
               </Button>
             </Link>
