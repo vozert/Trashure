@@ -1,21 +1,59 @@
 export const DATA_NAVBARS = [
-  { id: 1, title: "Home", link: "#home", active: true },
-  { id: 2, title: "Features", link: "#features" },
-  { id: 3, title: "Map", link: "#map" },
+  { 
+    id: 1, 
+    title: "Home", 
+    link: "#home", 
+    active: location?.pathname === "/" 
+  },
+  { 
+    id: 2, 
+    title: "Fitur", 
+    link: "#features",
+    active: false
+  },
+  { 
+    id: 3, 
+    title: "Map", 
+    link: "#map",
+    active: false
+  },
+  { 
+    id: 4, 
+    title: "Cara Kerja", 
+    link: "/howitworks",
+    active: location?.pathname === "/howitworks"
+  },
+  { 
+    id: 5, 
+    title: "Camera", 
+    link: "/demo",
+    active: location?.pathname === "/demo"
+  },
 ];
+
+export const AUTH_ROUTES = {
+  login: { path: "/login", title: "Login" },
+  register: { path: "/register", title: "Register" },
+};
+
+export const MAIN_ROUTES = {
+  home: { path: "/", title: "Home" },
+  demo: { path: "/demo", title: "Demo" },
+  caraKerja: { path: "/howitworks", title: "Cara Kerja" },
+};
 
 export const FOOTER_LINKS = {
   companies: [
-    { id: 1, name: "Privacy Policy" },
-    { id: 2, name: "Help Center" },
-    { id: 3, name: "Terms Conditions" },
-    { id: 4, name: "About Us" },
+    { id: 1, name: "Privacy Policy", href: "/privacy" },
+    { id: 2, name: "Help Center", href: "/help" },
+    { id: 3, name: "Terms Conditions", href: "/terms" },
+    { id: 4, name: "About Us", href: "/about" },
   ],
   developers: [
-    { id: 1, name: "API Documentations" },
-    { id: 2, name: "Product Knowledges" },
-    { id: 3, name: "Ticketing Support" },
-    { id: 4, name: "Pricing" },
+    { id: 1, name: "API Documentations", href: "/docs" },
+    { id: 2, name: "Product Knowledges", href: "/knowledge" },
+    { id: 3, name: "Ticketing Support", href: "/support" },
+    { id: 4, name: "Pricing", href: "/pricing" },
   ],
 };
 

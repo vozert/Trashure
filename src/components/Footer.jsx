@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             <p className="font-medium">&copy; Copyrights Pastilaris.</p>
           </div>
-          <div className="flex flex-wrap gap-y-7 gap-x-15 md:gap-20 items-center justify-between">
+          <div className="flex flex-wrap gap-y-7 gap-x-8 sm:gap-x-16 md:gap-x-24 items-center justify-between">
             <FooterSection title="Company" links={FOOTER_LINKS.companies} />
             <FooterSection title="Developer" links={FOOTER_LINKS.developers} />
           </div>

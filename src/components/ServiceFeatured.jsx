@@ -1,5 +1,6 @@
 import bannerServicesFeatured from "../assets/illustration_data.png";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const ServiceFeatured = () => (
   <section className="bg-white-2">
@@ -15,9 +16,11 @@ const ServiceFeatured = () => (
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-4">
-            <Button variant="primary" size="md">
-              Mulai Sekarang
-            </Button>
+            <Link to="/demo">
+              <Button variant="primary" size="md">
+                Mulai Sekarang
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="flex items-center justify-center flex-1">

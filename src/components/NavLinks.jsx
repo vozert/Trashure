@@ -2,9 +2,25 @@ import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { DATA_NAVBARS } from "../utils/data";
 
-export default function NavLinks({ isMobile = false }) {
+export default function NavLinks({ isMobile = false, onClose }) {
   const location = useLocation();
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
+  const isAuthPage = ["/login", "/register"].includes(location.pathname);
+
+  const linkClasses = `
+    hover:text-green-2 
+    hover:underline 
+    underline-offset-2 
+    transition-all 
+    duration-200
+  `;
+
+  const activeLinkClasses = "text-green-2 underline underline-offset-2";
+
+  const handleClick = () => {
+    if (isMobile && onClose) {
+      onClose();
+    }
+  };
 
   return (
     <ul
@@ -13,25 +29,27 @@ export default function NavLinks({ isMobile = false }) {
       } text-base font-semibold text-white-1`}
     >
       {DATA_NAVBARS.map((item) => {
-        const isActive = !isAuthPage && item.active;
+        const isActive = !isAuthPage && (
+          item.link === location.pathname || 
+          (item.link === "#home" && location.pathname === "/")
+        );
+
         return (
           <li key={item.id}>
             {item.link.startsWith("#") ? (
               <HashLink
                 smooth
                 to={`/${item.link}`}
-                className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
-                  isActive ? "text-green-2 underline underline-offset-2" : ""
-                }`}
+                className={`${linkClasses} ${isActive ? activeLinkClasses : ""}`}
+                onClick={handleClick}
               >
                 {item.title}
               </HashLink>
             ) : (
               <Link
-                to={item.link === "#home" ? "/" : item.link}
-                className={`hover:text-green-2 hover:underline underline-offset-2 transition-all duration-200 ${
-                  isActive ? "text-green-2 underline underline-offset-2" : ""
-                }`}
+                to={item.link}
+                className={`${linkClasses} ${isActive ? activeLinkClasses : ""}`}
+                onClick={handleClick}
               >
                 {item.title}
               </Link>

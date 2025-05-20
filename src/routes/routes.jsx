@@ -1,21 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import CaraKerja from "../pages/CaraKerja";
-import ScrollToTop from "../components/ScrollToTop";
+import HowItWorks from "../pages/HowItWorks";
+import Demo from "../pages/Demo";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/carakerja" element={<CaraKerja />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/howitworks" element={<HowItWorks />} />
+      <Route path="/demo" element={<Demo />} />
+    </Routes>
   );
 };
 

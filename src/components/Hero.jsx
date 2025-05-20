@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import bannerHero from "../assets/banner_hero.png";
 import { HashLink } from "react-router-hash-link";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-white-2">
       <div className="container mx-auto pb-8 md:pb-14">
@@ -31,6 +34,7 @@ export default function Hero() {
                 variant="primary" 
                 size="lg"
                 className="w-full sm:w-auto"
+                onClick={() => navigate("/demo")}
               >
                 Mulai Sekarang
               </Button>

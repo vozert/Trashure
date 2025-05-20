@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Change this import
 import "leaflet/dist/leaflet.css";
 import iconCheck from "../assets/icon-check.svg";
 import Button from "./Button";
 import MapUtil from "../utils/map";
 import { FEATURE_LIST } from "../utils/data";
-import { Link } from "react-router-dom";
 
 export default function Map() {
+  const navigate = useNavigate(); // Add useNavigate hook
   const mapContainer = useRef(null);
   const [userLocation, setUserLocation] = useState(null);
   const [placeName, setPlaceName] = useState("");
@@ -70,7 +71,6 @@ export default function Map() {
           </p>
         </div>
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-20 lg:pb-10">
-          {/* Left: Features & Testimonial */}
           <div className="flex flex-col items-start w-full lg:w-1/2 gap-10 md:gap-10">
             <div className="flex flex-col gap-y-3 text-left md:text-center lg:text-left w-full">
               <h2 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl leading-snug md:leading-normal text-gray-800">
@@ -90,13 +90,15 @@ export default function Map() {
                 </div>
               ))}
             </div>
-            <Link to="/carakerja" className="w-full md:w-auto">
-              <Button variant="secondary" size="md" className="w-full">
-                Pelajari Cara Kerja
-              </Button>
-            </Link>
+            <Button 
+              variant="secondary" 
+              size="md" 
+              className="w-full md:w-auto"
+              onClick={() => navigate("/howitworks")}
+            >
+              Pelajari Cara Kerja
+            </Button>
           </div>
-          {/* Right: Leaflet Map */}
           <div className="flex items-center justify-center w-full lg:w-1/2 mb-8 lg:mb-0">
             <div
               ref={mapContainer}

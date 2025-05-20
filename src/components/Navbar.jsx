@@ -4,14 +4,21 @@ import logowhite from "../assets/pastilaris-logo-white.svg";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
 
-export default function Navbar() {
+export default function Navbar({ variant = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const genericHamburgerLine =
     "h-[2px] w-full my-1 rounded-full bg-white-2 transition ease-in-out transform duration-300";
 
+  // Define background colors based on the variant prop
+  const bgColors = {
+    default: "bg-white-2",
+    white: "bg-white"
+  };
+
   return (
-    <header className="bg-white-2 p-2 lg:py-8">
+    <header className={`${bgColors[variant]} p-2 lg:py-8 relative z-50`}>
+      {/* Add relative and z-50 to header */}
       <div className="relative bg-green-1 py-5 md:px-8 px-6 container mx-auto rounded-full flex items-center justify-between lg:divide-x-2 divide-green-3">
         <a href="#" className="mr-8">
           <img src={logowhite} alt="Pastilaris Logo" className="w-36 md:w-40" />
@@ -66,7 +73,14 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`absolute top-[5.250rem] left-0 lg:hidden bg-green-1 px-6 py-8 rounded-lg w-full transition-all duration-300 transform ${
+          className={`fixed inset-0 bg-black/50 lg:hidden transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
+
+        <div
+          className={`absolute top-[5.250rem] left-0 lg:hidden bg-green-1 px-6 py-8 rounded-lg w-full transition-all duration-300 transform z-50 ${
             isOpen
               ? "translate-y-0 opacity-100 ease-in-out"
               : "-translate-y-[200%] opacity-0 ease-in-out"
