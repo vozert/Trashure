@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logowhite from "../assets/pastilaris-logo-white.svg";
 import Button from "./Button";
 import NavLinks from "./NavLinks";
 
@@ -21,7 +20,7 @@ export default function Navbar({ variant = "default" }) {
       {/* Add relative and z-50 to header */}
       <div className="relative bg-green-1 py-5 md:px-8 px-6 container mx-auto rounded-full flex items-center justify-between lg:divide-x-2 divide-green-3">
         <a href="#" className="mr-8">
-          <img src={logowhite} alt="Pastilaris Logo" className="w-36 md:w-40" />
+          <img src="" alt="Trashure Logo" className="w-36 md:w-40" />
         </a>
         <div className="hidden lg:block w-full">
           <div className="flex items-center justify-between">

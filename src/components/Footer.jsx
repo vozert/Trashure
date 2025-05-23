@@ -1,5 +1,4 @@
 import React from "react";
-import logoDark from "../assets/logo-dark.svg";
 import { FOOTER_LINKS } from "../utils/data";
 
 const FooterSection = ({ title, links }) => (
@@ -25,7 +24,7 @@ export default function Footer() {
       <div className="container mx-auto py-10 md:py-24 px-14">
         <div className="flex items-start justify-between flex-col lg:flex-row gap-10 lg:gap-0">
           <div className="flex flex-col gap-y-3 md:gap-y-5">
-            <img src={logoDark} alt="Trashure Logo" className="w-44" />
+            <img src="" alt="Trashure Logo" className="w-44" />
             <p className="font-medium leading-7">
               SaaS template by BuildWithAngga
               <br className="hidden md:block" />
