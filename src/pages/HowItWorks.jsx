@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import NavbarLogin from "../components/NavbarLogin";
 import Footer from "../components/Footer";
 import Work from "../components/Work";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const HowToPage = () => (
   <>
-    <Navbar variant="white" />
+    <NavbarLogin variant="white" />
     <Work />
     <Footer />
 	  <ScrollToTopButton />

@@ -25,12 +25,10 @@ export default function Footer() {
         <div className="flex items-start justify-between flex-col lg:flex-row gap-10 lg:gap-0">
           <div className="flex flex-col gap-y-3 md:gap-y-5">
             <img src="" alt="Trashure Logo" className="w-44" />
-            <p className="font-medium leading-7">
-              SaaS template by BuildWithAngga
-              <br className="hidden md:block" />
-              {" "}to help big companies grow.
+            <p className="font-medium leading-7 text-gray-700">
+              Empowering communities with smart waste management solutions.
             </p>
-            <p className="font-medium">&copy; Copyrights Pastilaris.</p>
+            <p className="font-medium">&copy; Copyrights Trashure.</p>
           </div>
           <div className="flex flex-wrap gap-y-7 gap-x-8 sm:gap-x-16 md:gap-x-24 items-center justify-between">
             <FooterSection title="Company" links={FOOTER_LINKS.companies} />

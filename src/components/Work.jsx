@@ -5,7 +5,7 @@ import { STEPS } from "../utils/data";
 
 const Work = () => {
   return (
-    <section className="min-h-screen py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-8">
+    <section className="min-h-screen py-12 md:py-16 lg:py-18 px-4 sm:px-6 md:px-8">
       {/* Header Section */}
       <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">

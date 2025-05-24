@@ -7,7 +7,7 @@ import MapUtil from "../utils/map";
 import { FEATURE_LIST } from "../utils/data";
 
 export default function Map() {
-  const navigate = useNavigate(); // Add useNavigate hook
+  const navigate = useNavigate();
   const mapContainer = useRef(null);
   const [userLocation, setUserLocation] = useState(null);
   const [placeName, setPlaceName] = useState("");
