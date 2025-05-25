@@ -104,7 +104,7 @@ export default function Navbar({ variant = "default" }) {
           </div>
           <footer className="pt-6">
             <p className="text-white-2 text-xs text-center">
-              &copy; {new Date().getFullYear()} PastiLaris. All rights reserved.
+              &copy; {new Date().getFullYear()} Trashure. All rights reserved.
             </p>
           </footer>
         </div>
