@@ -1,1 +1,0 @@
-export const MAP_SERVICE_API_KEY = 'UQ3PViIa8iX3LPZUiZoV';
