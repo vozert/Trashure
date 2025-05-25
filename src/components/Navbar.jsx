@@ -118,16 +118,18 @@ export default function Navbar({ variant = "default", isAuthenticated = false, u
     }
 
     return (
-      <Button
-        variant="white"
-        size="md"
-        onClick={() => {
-          if (isMobile) setIsOpen(false);
-          navigate("/login");
-        }}
-      >
-        Login
-      </Button>
+      <div className="flex flex-col gap-y-3">
+        <Button
+          variant="white"
+          size="md"
+          onClick={() => {
+            setIsOpen(false);
+            navigate("/login");
+          }}
+        >
+          Login
+        </Button>
+      </div>
     );
   };
 
