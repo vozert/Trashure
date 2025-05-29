@@ -30,7 +30,7 @@ const FEATURE_LIST = [
 
 function ServiceTabPanel() {
 	return (
-		<div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between px-4 sm:px-8 lg:py-1">
+		<div className="flex flex-col lg:flex-row gap-y-8 items-center justify-between px-4 sm:px-8 lg:px-2">
 			<div className="flex items-center justify-center flex-1">
 				<img src={bannerServices} alt="Service Banner" />
 			</div>
@@ -103,7 +103,7 @@ export default function Services() {
 							})}
 						</TabList>
 					</div>
-					<div className="px-2 md:px-4 pb-12 md:pb-24">
+					<div className="px-2 lg:px-2 md:px-4 pb-12 md:pb-24">
 						{TAB_DATA.map((_, idx) => (
 							<TabPanel key={idx}>
 								<ServiceTabPanel />

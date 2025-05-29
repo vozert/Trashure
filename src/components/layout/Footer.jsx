@@ -1,5 +1,5 @@
 import React from "react";
-import { FOOTER_LINKS } from "../utils/data";
+import { FOOTER_LINKS } from "../../utils/data";
 
 const FooterSection = ({ title, links }) => (
   <div className="flex flex-col gap-y-5">

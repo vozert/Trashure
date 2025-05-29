@@ -15,7 +15,7 @@ const SettingsPassword = () => {
   };
 
   return (
-    <div className="min-h-[655px] mt-5">
+    <div className="min-h-screen mt-5">
       <div className="container max-w-7xl mx-auto px-4 sm:px-8 md:px-14">
         <div className="flex flex-col lg:flex-row gap-8">
           <SettingsLinks />

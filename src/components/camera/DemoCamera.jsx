@@ -2,7 +2,7 @@ import React from "react";
 
 const DemoCamera = ({ videoRef, canvasRef, cameraSelectRef, isCameraActive }) => {
   return (
-    <div className="container mx-auto px-4 sm:px-8 md:px-14">
+    <section className="container mx-auto px-4 sm:px-8 md:px-14">
       <div className="relative w-full aspect-video max-w-5xl mx-auto bg-gray-200 rounded-xl overflow-hidden">
         <select 
           ref={cameraSelectRef}
@@ -27,7 +27,7 @@ const DemoCamera = ({ videoRef, canvasRef, cameraSelectRef, isCameraActive }) =>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

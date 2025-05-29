@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import DemoHero from "../components/DemoHero";
-import DemoCamera from "../components/DemoCamera";
-import DemoInfo from "../components/DemoInfo";
+import DemoHero from "../components/camera/DemoHero";
+import DemoCamera from "../components/camera/DemoCamera";
+import DemoInfo from "../components/camera/DemoInfo";
 import Camera from "../utils/camera";
 
 const Demo = () => {

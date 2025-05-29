@@ -7,6 +7,7 @@ import Demo from "../pages/Demo";
 import Settings from "../pages/Settings";
 import Profile from "../pages/Profile";
 import Password from "../pages/Password";
+import Dashboard from "../pages/Dashboard";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
         <Route path="profile" element={<Profile />} />
         <Route path="password" element={<Password />} />
       </Route>
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 };

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { FiChevronDown, FiGrid, FiSettings, FiLogOut } from "react-icons/fi";
 import NavLinks from "./NavLinks";
-import UserDropdown from "./navbar/UserDropdown";
-import HamburgerButton from "./navbar/HamburgerButton";
+import UserDropdown from "./layout/navbar/UserDropdown";
+import HamburgerButton from "./layout/navbar/HamburgerButton";
 
 export default function NavbarLogin({ variant = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
