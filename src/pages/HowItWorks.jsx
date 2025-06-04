@@ -7,7 +7,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const HowToPage = () => (
   <>
-    <NavbarLogin variant="white" />
+    <Navbar variant="white" />
     <Work />
     <Footer />
 	  <ScrollToTopButton />

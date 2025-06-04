@@ -7,7 +7,7 @@ import Footer from "../components/layout/Footer";
 const Settings = () => {
   return (
     <>
-      <NavbarLogin variant="white" />
+      <Navbar variant="white" />
       <Outlet />
       <Footer />
     </>

@@ -9,7 +9,7 @@ import {
   control,
   layerGroup,
 } from "leaflet";
-import { MAP_SERVICE_API_KEY } from "../config/key";
+// import { MAP_SERVICE_API_KEY } from "../config/key";
 
 export default class Map {
   #zoom = 5;
@@ -36,7 +36,7 @@ export default class Map {
       const url = new URL(
         `https://api.maptiler.com/geocoding/${longitude},${latitude}.json`
       );
-      url.searchParams.set("key", MAP_SERVICE_API_KEY);
+      url.searchParams.set("key", import.meta.env.VITE_MAP_SERVICE_API_KEY);
       url.searchParams.set("language", "id");
       url.searchParams.set("limit", "1");
       const response = await fetch(url);
@@ -97,8 +97,8 @@ export default class Map {
       }
     );
 
-    // Overlay: Parks
-    const parks = layerGroup([
+    // Overlay: vm
+    const vm = layerGroup([
       marker([-6.9008, 107.6155]).bindPopup("Taman Lansia"),
       marker([-6.9191, 107.6098]).bindPopup("Taman Vanda"),
       marker([-6.9119, 107.6246]).bindPopup("Taman Super Hero"),
@@ -107,7 +107,7 @@ export default class Map {
     // Layer control
     const layerControl = control.layers(
       { OpenStreetMap: tileOsm, OpenTopoMap: openTopoMap },
-      { Parks: parks }
+      { 'Vending Machine': vm }
     );
 
     // Initialize map
@@ -120,7 +120,7 @@ export default class Map {
     });
 
     layerControl.addTo(this.#map);
-    parks.addTo(this.#map);
+    vm.addTo(this.#map);
   }
 
   changeCamera(coordinate, zoomLevel = null) {

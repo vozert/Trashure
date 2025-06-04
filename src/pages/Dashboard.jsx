@@ -8,7 +8,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 const DashboardPage = () => {
   return (
     <>
-      <NavbarLogin variant="white" />
+      <Navbar variant="white" />
       <Dashboard />
       <Footer />
       <ScrollToTopButton />
