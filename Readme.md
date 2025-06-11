@@ -3,7 +3,7 @@
 ---
 
 ## 📱 Aplikasi Website Prediksi Jenis Sampah 
-Trashure adalah aplikasi web prediksi jenis sampah berbasis Machine Learning Image Classification yang mengklasifikasikan gambar menjadi empat kelas utama: Sampah botol Plastik, sampah botol Kaca, sampah botol kaleng, dan sampah lainnya. Aplikasi ini bertujuan untuk membantu pengguna memilah sampah secara otomatis melalui unggahan gambar, sehingga proses daur ulang menjadi lebih mudah dan efisien. Trashure juga menghadirkan sistem reward simulatif berupa poin digital yang diberikan apabila gambar sampah diklasifikasikan sebagai salah satu dari tiga kategori utama (plastik, kaca, atau kaleng). Reward ini dirancang untuk meningkatkan kesadaran masyarakat dalam memilah sampah sejak awal dan mendorong partisipasi aktif dalam pengelolaan lingkungan berkelanjutan.
+Trashure adalah aplikasi web prediksi jenis sampah berbasis Machine Learning Image Classification yang mengklasifikasikan gambar menjadi empat kelas utama: Sampah botol Plastik, sampah botol Kaca, sampah botol kaleng, dan sampah lainnya. Aplikasi web ini bertujuan untuk membantu pengguna memilah sampah secara otomatis melalui unggahan gambar, sehingga proses daur ulang menjadi lebih mudah dan efisien. Trashure juga menghadirkan sistem reward simulatif berupa poin digital yang diberikan apabila gambar sampah diklasifikasikan sebagai salah satu dari tiga kategori utama (plastik, kaca, atau kaleng). Reward ini dirancang untuk meningkatkan kesadaran masyarakat dalam memilah sampah sejak awal dan mendorong partisipasi aktif dalam pengelolaan lingkungan berkelanjutan.
 
 ---
 
